@@ -1,0 +1,635 @@
+<!-- old way of handling order from other pages than order.html (popup way) -->
+
+
+
+
+<!-- create package btn -->
+<div data-bs-toggle="modal" href="#mainOrderModal" class="createPackageBtn">
+    <img src="../assets/icons/createPackageIcon.svg" alt="create package icon">
+    <h5 class="fontBold text-white">إنشاء شحنة</h5>
+</div>
+<!-- ./create package btn -->
+
+<!-- placing an order modal -->
+<div class="modal fade" id="mainOrderModal" aria-hidden="true" aria-labelledby="mainOrderModalLabel" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mainOrderModalLabel">طلب شحنة</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="order">
+                    <div class="container">
+                        <div  class="mainHeading my-5">
+                            <h2>طلب شحنة</h2>
+                            <h5 class="mt-3">طلب شحنة في خطوات بسيطة.</h5>
+                        </div>
+
+                        <div class="fastOrder mb-5">
+                            <div class="row row-cols-1 row-cols-md-2">
+                                <div class="col">
+                                    <div class="downloadTemp d-flex flex-column align-items-center">
+                                        <h4 class="text-primary mb-4">حمل قالب باي شيب</h4>
+                                        <a href="https://drive.google.com/uc?export=download&id=1sAbJD1mzItfjip_hJkFY0NZ0qxG4Tewg" class="download pointer btnClickTop mb-4">
+                                            <img src="../assets/icons/excel.svg" alt="excel icon">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <h5 class="download__title">payship.xlsx</h5>
+                                                <span class="download__size">64KB</span>
+                                            </div>
+                                            <img src="../assets/icons/cloud-download.svg" alt="download icon">
+
+                                        </a>
+
+                                    </div>
+
+                                    <div class="dividerWithOr my-5 grayed">
+                                        <div class="centerFlex">ثم</div>
+                                    </div>
+
+                                    <form action="" id="excelForm" class="d-flex flex-column align-items-center mt-5"
+                                        novalidate>
+                                        <h4 class="text-primary mb-3">سجل طلبك في خطوة</h4>
+                                        <div class="form-group mb-3">
+                                            <!-- specific uploaded file name -->
+                                            <input hidden
+                                                data-pattern="^[payship]+(.xlsb|.xlsm|.xlsx|.xltx|.xls|.xlt|.xml|.xlam|.xla|.xlw|.xlr)$"
+                                                accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                                                required type="file" id="excelFileUpload" />
+                                            <div id="custom-button"
+                                                class="uploadFile pointer d-inline-flex align-items-center">
+                                                <button type="button" class="btn btn-primary">إختيار
+                                                    الملف</button>
+                                                <div id="custom-text" class="mx-3 fontMedium">لم تختار ملف للآن.
+                                                </div>
+
+                                                <img src="../assets/icons/excel.svg" alt="">
+                                            </div>
+
+                                            <div class="invalid-feedback">
+                                                برجاء رفع القالب الخاص بنا
+                                            </div>
+                                        </div>
+
+                                        <button id="toggleRegister" type="submit"
+                                            class="px-4 fontBold btn btn-primary mt-2 btnClickTop">عرض شركات
+                                            الشحن</button>
+                                    </form>
+
+                                </div>
+                                <div class="dividerWithOr vertical">
+                                    <div class="centerFlex">أو</div>
+                                </div>
+                                <div class="col">
+                                    <form class="needs-validation ms-md-5 orderForm" novalidate>
+                                        <div class="row mb-3">
+                                            <div class="col-12 col-lg-4 mb-3 mb-lg-0">
+                                                <label for="packType" class="form-label fontMedium">نوع الشحنة <span
+                                                        class="text-danger">*</span></label>
+                                                <select required id="packType" class="form-select"
+                                                    aria-label="Default select example">
+                                                    <option selected disabled value="">نوع الشحنة</option>
+                                                    <option value="1">طرد</option>
+                                                    <option value="2">صندوق</option>
+                                                    <option value="3">غيره</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    إختر نوع الشحنة.
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-lg-4">
+                                                <label class="form-label fontMedium" for="packNumber">العدد <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="d-flex gap-2 heroCounter flex-wrap">
+                                                    <img class="pointer btnClickTop heroCounter__increment"
+                                                        src="../assets/icons/plusRounded.svg" alt="plus icon">
+                                                    <input id="packNumber" class="centerText heroCounter__number"
+                                                        min="1" max="20" value="1" data-min="1" data-max="20" required
+                                                        type="number">
+                                                    <img class="pointer btnClickTop heroCounter__decrement"
+                                                        src="../assets/icons/minusRounded.svg" alt="minus icon">
+                                                    <!-- <div class="flexBreak"></div> -->
+                                                    <div class="invalid-feedback">
+                                                        أدخل عدد صحيح
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-lg-4">
+                                                <label class="form-label fontMedium" for="packWeight">الوزن <span
+                                                        class="text-danger">*</span><span
+                                                        class="text-muted">(كجم)</span></label>
+                                                <div class="d-flex gap-2 heroCounter flex-wrap">
+                                                    <img class="pointer btnClickTop heroCounter__increment"
+                                                        src="../assets/icons/plusRounded.svg" alt="plus icon">
+                                                    <input id="packWeight" class="centerText heroCounter__number"
+                                                        min="1" max="20" value="1" data-min="1" data-max="20" required
+                                                        type="number">
+                                                    <img class="pointer btnClickTop heroCounter__decrement"
+                                                        src="../assets/icons/minusRounded.svg" alt="minus icon">
+                                                    <div class="invalid-feedback">
+                                                        ادخل وزن صحيح.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row mb-3 row-cols-1 row-cols-sm-2">
+                                            <div class="col">
+                                                <label for="startPoint" class="form-label fontMedium">نقطة الإنطلاق
+                                                    <span class="text-danger">*</span></label>
+                                                <select required id="startPoint" class="form-select"
+                                                    aria-label="Default select example">
+                                                    <option selected disabled value="">نقطة الإنطلاق</option>
+                                                    <option value="1">طرد</option>
+                                                    <option value="2">صندوق</option>
+                                                    <option value="3">غيره</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    إختر نقطة الإنطلاق.
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <label for="endPoint" class="form-label fontMedium">نقطة التسليم
+                                                    <span class="text-danger">*</span></label>
+                                                <select required id="endPoint" class="form-select"
+                                                    aria-label="Default select example">
+                                                    <option selected disabled value="">نقطة التسليم</optionselected>
+                                                    <option value="1">طرد</option>
+                                                    <option value="2">صندوق</option>
+                                                    <option value="3">غيره</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    إختر نقطة التسليم.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-12 col-sm-4 col-md-6 col-lg-4 mb-3 mb-lg-0">
+                                                <label class="form-label fontMedium" for="packTall">الطول <span
+                                                        class="text-danger">*</span>
+                                                    <span class="text-muted">(م)</span></label>
+                                                <div class="d-flex gap-2 heroCounter flex-wrap">
+                                                    <img class="pointer btnClickTop heroCounter__increment"
+                                                        src="../assets/icons/plusRounded.svg" alt="plus icon">
+                                                    <input id="packTall" class="centerText heroCounter__number" min="1"
+                                                        max="20" value="1" data-min="1" data-max="20" required
+                                                        type="number">
+                                                    <img class="pointer btnClickTop heroCounter__decrement"
+                                                        src="../assets/icons/minusRounded.svg" alt="minus icon">
+                                                    <div class="invalid-feedback">
+                                                        ادخل طول صحيح.
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 col-sm-4 col-md-6 col-lg-4 mb-3 mb-lg-0">
+                                                <label class="form-label fontMedium" for="packWidth">العرض <span
+                                                        class="text-danger">*</span>
+                                                    <span class="text-muted">(م)</span></label>
+                                                <div class="d-flex gap-2 heroCounter flex-wrap">
+                                                    <img class="pointer btnClickTop heroCounter__increment"
+                                                        src="../assets/icons/plusRounded.svg" alt="plus icon">
+                                                    <input id="packWidth" class="centerText heroCounter__number" min="1"
+                                                        max="20" value="1" data-min="1" data-max="20" required
+                                                        type="number">
+                                                    <img class="pointer btnClickTop heroCounter__decrement"
+                                                        src="../assets/icons/minusRounded.svg" alt="minus icon">
+                                                    <div class="invalid-feedback">
+                                                        ادخل عرض صحيح.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-4 col-md-6 col-lg-4">
+                                                <label class="form-label fontMedium" for="packHeight">الإرتفاع <span
+                                                        class="text-danger">*</span> <span
+                                                        class="text-muted">(م)</span></label>
+                                                <div class="d-flex gap-2 heroCounter flex-wrap">
+                                                    <img class="pointer btnClickTop heroCounter__increment"
+                                                        src="../assets/icons/plusRounded.svg" alt="plus icon">
+                                                    <input id="packHeight" class="centerText heroCounter__number"
+                                                        min="1" max="20" value="1" data-min="1" data-max="20" required
+                                                        type="number">
+                                                    <img class="pointer btnClickTop heroCounter__decrement"
+                                                        src="../assets/icons/minusRounded.svg" alt="minus icon">
+                                                    <div class="invalid-feedback">
+                                                        ادخل إرتفاع صحيح.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row mb-3">
+                                            <div class="col-12">
+                                                <label class="form-label fontMedium" for="packDetails">وصف
+                                                    الشحنة</label>
+                                                <textarea class="form-control" placeholder="تفاصيل الشحنة"
+                                                    id="packDetails"></textarea>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="invalidCheck" required>
+                                                <label class="form-check-label" for="invalidCheck">
+                                                    أوافق علي <a class="text-primary fontMedium" href="#">شروط باي
+                                                        شيب.</a>
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    إقرأ شروطنا ووافق عليها فضلاً.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit"
+                                                class="fontBold btn btn-primary w-100 mt-2 btnClickTop">عرض شركات
+                                                الشحن</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-toggle="modal">إلغاء</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- rest of modals -->
+<!-- packing companies modal -->
+<div class="modal fade customValidationIndicator" id="packCompaniesModal" aria-hidden="true"
+    aria-labelledby="packCompaniesModalLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <form class="modal-content needs-validation packCompaniesForm" novalidate>
+            <div class="modal-header">
+                <div class="d-flex w-100">
+                    <input class="form-control me-2" type="search" placeholder="بحث" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">بحث</button>
+                </div>
+                <button type="button" class="btn-close ms-4 explicitModalBtn" data-hide="packCompaniesModal"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row g-2 row-cols-1 row-cols-sm-2 row-cols-md-1">
+                    <h5 class="text-primary">اختير حديثاً</h5>
+                    <div class="divider"></div>
+                    <div class="col">
+                        <div class="form-check p-0">
+                            <input hidden required class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label w-100" for="flexRadioDefault1">
+                                <div class="comp">
+                                    <div class="comp__top d-flex gap-1 flex-row flex-sm-column flex-md-row">
+                                        <div class="comp__logo">
+                                            <img src="../assets/companies/logo_ar.png" alt="">
+                                        </div>
+                                        <ul class="comp__list">
+                                            <li class="comp__item">
+                                                <span>مدة توصيل قليلة.</span>
+                                            </li>
+                                            <li class="comp__item">
+                                                <span>الإلتقاط من مكان العمل.</span>
+                                            </li>
+                                            <li class="comp__item">
+                                                <span>أوقات مناسبة لإلتقاط الشحنات</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="divider dark full my-2"></div>
+                                    <div class="comp__buttons d-flex justify-content-between align-items-center">
+                                        <div class="comp__price text-primary fontBold fs-4">200$</div>
+
+                                        <div>
+
+                                            <div class="btn btn-primary ms-2 explicitModalBtn"
+                                                data-show="packCompanyDetails" data-hide="packCompaniesModal">إختيار
+                                                وعرض التفاصيل</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-check p-0">
+                            <input hidden required class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault2">
+                            <label class="form-check-label w-100" for="flexRadioDefault2">
+                                <div class="comp ">
+                                    <div class="comp__top d-flex gap-1 flex-row flex-sm-column flex-md-row">
+                                        <div class="comp__logo">
+                                            <img src="../assets/companies/logo_ar.png" alt="">
+                                        </div>
+                                        <ul class="comp__list">
+                                            <li class="comp__item">
+                                                <span>مدة توصيل قليلة.</span>
+                                            </li>
+                                            <li class="comp__item">
+                                                <span>الإلتقاط من مكان العمل.</span>
+                                            </li>
+                                            <li class="comp__item">
+                                                <span>أوقات مناسبة لإلتقاط الشحنات</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="divider dark full my-2"></div>
+                                    <div class="comp__buttons d-flex justify-content-between align-items-center">
+                                        <div class="comp__price text-primary fontBold fs-4">200$</div>
+
+                                        <div>
+
+                                            <div class="btn btn-primary ms-2 explicitModalBtn"
+                                                data-show="packCompanyDetails" data-hide="packCompaniesModal">إختيار
+                                                وعرض التفاصيل</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <h5 class="text-primary mt-4">المزيد</h5>
+                    <div class="divider"></div>
+                    <div class="col">
+                        <div class="form-check p-0">
+                            <input hidden required class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault3">
+                            <label class="form-check-label w-100" for="flexRadioDefault3">
+                                <div class="comp ">
+                                    <div class="comp__top d-flex gap-1 flex-row flex-sm-column flex-md-row">
+                                        <div class="comp__logo">
+                                            <img src="../assets/companies/logo_ar.png" alt="">
+                                        </div>
+                                        <ul class="comp__list">
+                                            <li class="comp__item">
+                                                <span>مدة توصيل قليلة.</span>
+                                            </li>
+                                            <li class="comp__item">
+                                                <span>الإلتقاط من مكان العمل.</span>
+                                            </li>
+                                            <li class="comp__item">
+                                                <span>أوقات مناسبة لإلتقاط الشحنات</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="divider dark full my-2"></div>
+                                    <div class="comp__buttons d-flex justify-content-between align-items-center">
+                                        <div class="comp__price text-primary fontBold fs-4">200$</div>
+
+                                        <div>
+
+                                            <div class="btn btn-primary ms-2 explicitModalBtn"
+                                                data-show="packCompanyDetails" data-hide="packCompaniesModal">إختيار
+                                                وعرض التفاصيل</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-check p-0">
+                            <input hidden required class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault4">
+                            <label class="form-check-label w-100" for="flexRadioDefault4">
+                                <div class="comp ">
+                                    <div class="comp__top d-flex gap-1 flex-row flex-sm-column flex-md-row">
+                                        <div class="comp__logo">
+                                            <img src="../assets/companies/logo_ar.png" alt="">
+                                        </div>
+                                        <ul class="comp__list">
+                                            <li class="comp__item">
+                                                <span>مدة توصيل قليلة.</span>
+                                            </li>
+                                            <li class="comp__item">
+                                                <span>الإلتقاط من مكان العمل.</span>
+                                            </li>
+                                            <li class="comp__item">
+                                                <span>أوقات مناسبة لإلتقاط الشحنات</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="divider dark full my-2"></div>
+                                    <div class="comp__buttons d-flex justify-content-between align-items-center">
+                                        <div class="comp__price text-primary fontBold fs-4">200$</div>
+
+                                        <div>
+
+                                            <div class="btn btn-primary ms-2 explicitModalBtn"
+                                                data-show="packCompanyDetails" data-hide="packCompaniesModal">sإختيار
+                                                وعرض التفاصيل</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">عرض ملخص الطلب</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!-- packing company details modal -->
+<div class="modal fade" id="packCompanyDetails" aria-hidden="true" aria-labelledby="packCompanyDetailsLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="packCompanyDetailsLabel">اسم ولوجو الشركة</h5>
+                <button type="button" class="btn-close explicitModalBtn" data-show="packCompaniesModal"
+                    data-hide="packCompanyDetails" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                تفاصيل الشركة
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary explicitModalBtn" data-show="packCompaniesModal"
+                    data-hide="packCompanyDetails">عودة</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- summary modal  -->
+<div class="modal fade summaryModal" id="summaryModal" aria-hidden="true" aria-labelledby="summaryModalLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="summaryModalLabel">ملخص طلبك</h5>
+                <button type="button" class="btn-close explicitModalBtn" data-show="packCompaniesModal"
+                    data-hide="summaryModal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body table-responsive">
+                <table class="table">
+                    <col style="width: 40%;" />
+                    <thead>
+                        <tr>
+                            <th class="table-light" scope="col">العنصر</th>
+                            <th scope="col">القيمة</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider summaryModal__tbody">
+                        <tr>
+                            <th class="table-light" scope="row">نوع الشحنة</th>
+                            <td>صندوق</td>
+
+                        </tr>
+                        <tr>
+                            <th class="table-light" scope="row">العدد</th>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <th class="table-light" scope="row">الوزن</th>
+                            <td>40 كجم</td>
+                        </tr>
+                        <tr>
+                            <th class="table-light" scope="row">نقطة الإنطلاق</th>
+                            <td>الرياض</td>
+                        </tr>
+                        <tr>
+                            <th class="table-light" scope="row">نقطة التسليم</th>
+                            <td>جدة</td>
+                        </tr>
+                        <tr>
+                            <th class="table-light" scope="row">الطول</th>
+                            <td>15 متر</td>
+                        </tr>
+                        <tr>
+                            <th class="table-light" scope="row">العرض</th>
+                            <td>15 متر</td>
+                        </tr>
+                        <tr>
+                            <th class="table-light" scope="row">الإرتفاع</th>
+                            <td>15 متر</td>
+                        </tr>
+                        <tr>
+                            <th class="table-light" scope="row">شركة الشحن</th>
+                            <td>شركة سمسا</td>
+                        </tr>
+                        <tr>
+                            <th class="table-light" scope="row">وصف الشحنة</th>
+                            <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع
+                                النصوص بالتصاميم سواء كانت تصاميم
+                                مطبوعه ... بروشور او فلاير على سبيل المثال</td>
+                        </tr>
+                        <tr>
+                            <th class="table-primary" scope="row">السعر</th>
+                            <td class="table-primary">200$</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <div class="d-flex align-items-center">
+                    <img src="../assets/icons/business.svg" alt="package icon">
+                    <h5 class="text-primary mb-0 ms-2">باقة أعمال</h5>
+                </div>
+                <div>
+                    <button class="btn btn-primary explicitModalBtn" data-show="ourPackages"
+                        data-hide="summaryModal">تأكيد</button>
+                    <button class="btn btn-secondary explicitModalBtn" data-show="packCompaniesModal"
+                        data-hide="summaryModal">عودة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- our packages modal -->
+<div class="modal  modal-xl fade ourPackages" id="ourPackages" aria-hidden="true" aria-labelledby="ourPackagesLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ourPackagesLabel">باقات باي شيب</h5>
+                <button type="button" class="btn-close explicitModalBtn" data-show="summaryModal"
+                    data-hide="ourPackages" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div  class="mainHeading my-5">
+                    <h2>إختر باقتك وتمتع بمزايا باي شيب</h2>
+                    <h5 class="mt-3">باي شيب يوفر لكم أفضل الأسعار التنافسية</h5>
+                </div>
+
+                <div
+                    class="ourPackages__container d-flex gap-3 justify-content-center align-items-center flex-column flex-lg-row">
+                    <div class="ourPackages__pack zoomed">
+                        <div class="ourPackage d-inline-flex flex-column align-items-center business">
+                            <img class="ourPackage__icon" src="../assets/icons/business.svg" alt="">
+                            <h3 class="text-primary ourPackage__heading mt-4 mb-2">باقة الأعمال</h3>
+                            <h5 class="text-secondary ourPackage__subheading">أفضل باقة لدينا</h4>
+
+                                <h3 class="text-primary mt-3 mb-5 ourPackage__price">200$</h3>
+
+                                <ul class="ourPackage__list">
+                                    <li class="ourPackage__item">بدون رسوم تسجيل.</li>
+                                    <li class="ourPackage__item">بدون إشتراك شهري.</li>
+                                    <li class="ourPackage__item">عدد شحنات غير محدود.</li>
+                                    <li class="ourPackage__item">دعم فني وإداري 24 ساعة.</li>
+                                    <li class="ourPackage__item">خيارات غير محدودة من شركات الشحن.</li>
+                                    <li class="ourPackage__item">مدير حساب خاص.</li>
+                                    <li class="ourPackage__item">ربط مع نظام البيع الخاص.</li>
+                                    <li class="ourPackage__item">تتبع لعمليات الشحن.</li>
+                                    <li class="ourPackage__item">تحليل عمليات الشحن.</li>
+                                    <li class="ourPackage__item">دعم وإستشارات لوجيستية.</li>
+                                </ul>
+
+                                <button class="btn btn-primary mt-3 w-100">إشترك معنا</button>
+                        </div>
+
+                        <!-- <div class="ourPackage__label text-bg-primary text-white fontMedium centerText">الأفضل</div> -->
+                    </div>
+                    <div class="ourPackages__pack">
+                        <div class="ourPackage d-flex flex-column align-items-center developing">
+                            <img class="ourPackage__icon" src="../assets/icons/developing.svg" alt="">
+                            <h3 class="text-primary ourPackage__heading mt-4 mb-2">باقة النمو</h3>
+                            <h5 class="text-secondary ourPackage__subheading">باقة تكفي إحتياجاتك</h4>
+
+                                <h3 class="text-primary mt-3 mb-5 ourPackage__price">100$ / شهر</h3>
+
+                                <ul class="ourPackage__list">
+                                    <li class="ourPackage__item">الربط مع المتاجر</li>
+                                    <li class="ourPackage__item">عدد 2 مستخدم للمنصة</li>
+                                    <li class="ourPackage__item">أسعار تنافسية لعمليات الشحن</li>
+                                    <li class="ourPackage__item">خيارات متعددة لشركات الشحن</li>
+                                    <li class="ourPackage__item">200 طلب شهرياً</li>
+                                    <li class="ourPackage__item">تتبع الشحنات</li>
+                                    <li class="ourPackage__item">إدارة الرجيع</li>
+                                    <li class="ourPackage__item">5 ريال لطباعة الرجيع</li>
+                                </ul>
+
+                                <button class="btn btn-primary mt-3 w-100">إشترك معنا</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary explicitModalBtn" data-show="summaryModal"
+                    data-hide="ourPackages">عودة</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ./ placing an order -->

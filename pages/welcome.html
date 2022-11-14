@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ////// favicon ////// -->
+    <link rel="icon" href="../favicon.ico">
+    <link rel="shortcut icon" href="../favImg.png">
+
+    <!-- ////// general styles ////// -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../dist/css/bootstrapRTL.min.css">
+
+    
+    
+    
+
+    <!-- ////// our styles ////// -->
+    <!-- common -->
+    <link rel="stylesheet" href="../dist/css/common.css">
+    <!-- welcome -->
+    <link rel="stylesheet" href="../dist/css/welcome.css">
+
+    <!-- ////// general js ////// -->
+    <!-- jq -->
+    <!-- <script src='../dist/js/jquery-3.6.0.min.js' defer></script> -->
+    <!-- bootstrap -->
+    <script src='../dist/js/bootstrap.bundle.min.js' defer></script>
+
+
+    <!-- ////// our js ////// -->
+    <!-- sideNav -->
+    <script src='../dist/js/sideNav.js' defer></script>
+    <!-- formValidation -->
+    <script src='../dist/js/formsValidation.js' defer></script>
+
+    <title>PAYSHIP | أهلاً بك</title>
+</head>
+
+<body>
+    <!-- ////////// shared /////////// -->
+    <!-- header -->
+    <header class="header p-3 bg-white">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <img class="burger_menu pointer" src="../assets/icons/burger_menu.svg" alt="burger menu">
+
+                    <a href="/" class="logoText">
+                        <img src="../assets/logo_text.png" alt="logo text">
+                    </a>
+                </div>
+
+                <div class="text-end d-flex align-items-center gap-2 gap-lg-4 gap-md-3">
+                    <button type="button" class="btn btn-primary">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ./ header -->
+
+
+    <!-- sidenav -->
+    <div class="sideNav d-flex flex-column flex-shrink-0 p-3 text-bg-white" style="width: 280px;">
+        <div class="sideNav__logo d-flex align-items-center gap-3">
+            <img class="close_menu pointer" src="../assets/icons/close.svg" alt="close menu">
+
+            <a href="/" class="logoText">
+                <img src="../assets/logo_text.png" alt="logo text">
+            </a>
+        </div>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="../index.html" class="d-flex align-items-center gap-lg-3 gap-2 nav-link" aria-current="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 28">
+                        <path
+                            d="M28.3986 13.7833L16.0387 1.6053L15.2102 0.788604C15.0214 0.603748 14.7661 0.5 14.5001 0.5C14.234 0.5 13.9787 0.603748 13.7899 0.788604L0.601497 13.7833C0.408072 13.9732 0.255206 14.1994 0.15192 14.4485C0.0486344 14.6976 -0.00297684 14.9646 0.000132587 15.2338C0.0129276 16.3437 0.950161 17.2298 2.07612 17.2298H3.43559V27.5H25.5645V17.2298H26.9528C27.4998 17.2298 28.0148 17.0185 28.4018 16.637C28.5924 16.4497 28.7434 16.227 28.8461 15.9818C28.9488 15.7366 29.0011 15.4738 29 15.2085C29 14.6725 28.7857 14.1648 28.3986 13.7833V13.7833ZM16.2914 25.2296H12.7088V18.797H16.2914V25.2296ZM23.2614 14.9594V25.2296H18.3386V18.0402C18.3386 17.3433 17.766 16.7789 17.0591 16.7789H11.9411C11.2341 16.7789 10.6616 17.3433 10.6616 18.0402V25.2296H5.73869V14.9594H2.66789L14.5033 3.30176L15.2422 4.03017L26.3354 14.9594H23.2614Z" />
+                    </svg>
+                    الرئيسية
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./tracking.html" class="d-flex align-items-center nav-link gap-lg-3 gap-2">
+                    <svg class="scaled" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M28.25 5.75L26.699 7.301L29.537 10.15H17.25C15.6241 10.1502 14.0562 10.7539 12.85 11.844V4.463L15.699 7.301L17.25 5.75L11.75 0.25L6.25 5.75L7.801 7.301L10.65 4.463V16.75C10.6504 18.3758 11.2541 19.9436 12.344 21.15H4.963L7.801 18.301L6.25 16.75L0.75 22.25L6.25 27.75L7.801 26.199L4.963 23.35H17.25C18.525 23.3522 19.7733 22.9844 20.8434 22.2912C21.9136 21.5981 22.7596 20.6093 23.2789 19.4449C23.7983 18.2804 23.9686 16.9903 23.7693 15.731C23.57 14.4716 23.0096 13.2972 22.156 12.35H29.537L26.699 15.199L28.25 16.75L33.75 11.25L28.25 5.75ZM21.65 16.75C21.65 17.6202 21.3919 18.4709 20.9085 19.1945C20.425 19.9181 19.7378 20.482 18.9338 20.8151C18.1298 21.1481 17.2451 21.2352 16.3916 21.0655C15.5381 20.8957 14.7541 20.4766 14.1387 19.8613C13.5234 19.2459 13.1043 18.4619 12.9345 17.6084C12.7648 16.7549 12.8519 15.8702 13.1849 15.0662C13.518 14.2622 14.0819 13.575 14.8055 13.0915C15.5291 12.6081 16.3798 12.35 17.25 12.35C18.4165 12.3515 19.5348 12.8155 20.3597 13.6403C21.1845 14.4652 21.6485 15.5835 21.65 16.75Z" />
+                    </svg>
+        
+                    تتبع شحنة
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./orders.html" class="d-flex align-items-center nav-link gap-lg-3 gap-2">
+                    <svg class="stroked stroked2" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.5 3H2.5C1.94772 3 1.5 3.44772 1.5 4V20C1.5 20.5523 1.94772 21 2.5 21H15.5C16.0523 21 16.5 20.5523 16.5 20V4C16.5 3.44772 16.0523 3 15.5 3Z"
+                            stroke-linejoin="round" />
+                        <path d="M6 1V4M12 1V4M5 8.5H13M5 12.5H11M5 16.5H9" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+        
+                    طلبات الشحن
+                </a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="#" class="d-flex align-items-center nav-link gap-lg-3 gap-2">
+                    <svg class="stroked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 34" fill="none">
+                        <path d="M8.41672 2.33321L2 7.83326L8.41672 14.25" stroke-width="2.75" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M2 7.83325H23.078C29.3875 7.83325 34.7455 12.985 34.9911 19.2917C35.2515 25.9559 29.745 31.6668 23.078 31.6668H7.49822"
+                            stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    الرجيع
+                </a>
+            </li>
+            <!-- <li class="nav-item">
+                        <a href="#" class="d-flex align-items-center nav-link gap-lg-3 gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 34">
+                                <path
+                                    d="M0 6.84615C0 5.16305 0.668611 3.54888 1.85875 2.35875C3.04888 1.16861 4.66305 0.5 6.34615 0.5H24.1154C25.7985 0.5 27.4127 1.16861 28.6028 2.35875C29.7929 3.54888 30.4615 5.16305 30.4615 6.84615V19.1247C29.6588 18.7427 28.803 18.4843 27.9231 18.3581V10.6538H22.8462V18.2692H20.3077V10.6538H10.1538V20.8077H10.2808C9.43557 21.6342 8.76431 22.6214 8.30655 23.7113C7.8488 24.8012 7.61379 25.9717 7.61538 27.1538V23.3462H2.53846V24.6154C2.53846 25.6252 2.93963 26.5937 3.65371 27.3078C4.36779 28.0219 5.33629 28.4231 6.34615 28.4231H7.61538V27.1538C7.61538 28.517 7.92 29.8065 8.47085 30.9615H6.34615C4.66305 30.9615 3.04888 30.2929 1.85875 29.1028C0.668611 27.9127 0 26.2985 0 24.6154V6.84615ZM7.61538 10.6538H2.53846V20.8077H7.61538V10.6538ZM10.1538 8.11538H20.3077V3.03846H10.1538V8.11538ZM7.61538 3.03846H6.34615C5.33629 3.03846 4.36779 3.43963 3.65371 4.15371C2.93963 4.86779 2.53846 5.83629 2.53846 6.84615V8.11538H7.61538V3.03846ZM27.9231 8.11538V6.84615C27.9231 5.83629 27.5219 4.86779 26.8078 4.15371C26.0937 3.43963 25.1252 3.03846 24.1154 3.03846H22.8462V8.11538H27.9231ZM16.5 20.8077C14.8169 20.8077 13.2027 21.4763 12.0126 22.6664C10.8225 23.8566 10.1538 25.4707 10.1538 27.1538C10.1538 28.8369 10.8225 30.4511 12.0126 31.6413C13.2027 32.8314 14.8169 33.5 16.5 33.5H17.7692C18.1059 33.5 18.4287 33.3663 18.6667 33.1283C18.9047 32.8902 19.0385 32.5674 19.0385 32.2308C19.0385 31.8941 18.9047 31.5713 18.6667 31.3333C18.4287 31.0953 18.1059 30.9615 17.7692 30.9615H16.5C15.4901 30.9615 14.5216 30.5604 13.8076 29.8463C13.0935 29.1322 12.6923 28.1637 12.6923 27.1538C12.6923 26.144 13.0935 25.1755 13.8076 24.4614C14.5216 23.7473 15.4901 23.3462 16.5 23.3462H17.7692C18.1059 23.3462 18.4287 23.2124 18.6667 22.9744C18.9047 22.7364 19.0385 22.4135 19.0385 22.0769C19.0385 21.7403 18.9047 21.4175 18.6667 21.1794C18.4287 20.9414 18.1059 20.8077 17.7692 20.8077H16.5ZM25.3846 20.8077C25.048 20.8077 24.7252 20.9414 24.4871 21.1794C24.2491 21.4175 24.1154 21.7403 24.1154 22.0769C24.1154 22.4135 24.2491 22.7364 24.4871 22.9744C24.7252 23.2124 25.048 23.3462 25.3846 23.3462H26.6538C27.6637 23.3462 28.6322 23.7473 29.3463 24.4614C30.0604 25.1755 30.4615 26.144 30.4615 27.1538C30.4615 28.1637 30.0604 29.1322 29.3463 29.8463C28.6322 30.5604 27.6637 30.9615 26.6538 30.9615H25.3846C25.048 30.9615 24.7252 31.0953 24.4871 31.3333C24.2491 31.5713 24.1154 31.8941 24.1154 32.2308C24.1154 32.5674 24.2491 32.8902 24.4871 33.1283C24.7252 33.3663 25.048 33.5 25.3846 33.5H26.6538C28.3369 33.5 29.9511 32.8314 31.1413 31.6413C32.3314 30.4511 33 28.8369 33 27.1538C33 25.4707 32.3314 23.8566 31.1413 22.6664C29.9511 21.4763 28.3369 20.8077 26.6538 20.8077H25.3846ZM15.2308 27.1538C15.2308 26.8172 15.3645 26.4944 15.6025 26.2564C15.8405 26.0183 16.1634 25.8846 16.5 25.8846H26.6538C26.9905 25.8846 27.3133 26.0183 27.5513 26.2564C27.7894 26.4944 27.9231 26.8172 27.9231 27.1538C27.9231 27.4905 27.7894 27.8133 27.5513 28.0513C27.3133 28.2894 26.9905 28.4231 26.6538 28.4231H16.5C16.1634 28.4231 15.8405 28.2894 15.6025 28.0513C15.3645 27.8133 15.2308 27.4905 15.2308 27.1538Z" />
+                            </svg>
+                            الربط
+                        </a>
+                    </li> -->
+            <!-- <li class="nav-item">
+                        <a href="#" class="d-flex align-items-center nav-link gap-lg-3 gap-2">
+                            <svg class="stroked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 33" fill="none">
+                                <path
+                                    d="M13.125 16.1667V8.83333M24.125 16.1667V12.5M18.625 16.1667V14.3333M2.125 1.5H35.125M3.95833 1.5V19.8333C3.95833 20.8058 4.34464 21.7384 5.03228 22.4261C5.71991 23.1137 6.65254 23.5 7.625 23.5H29.625C30.5975 23.5 31.5301 23.1137 32.2177 22.4261C32.9054 21.7384 33.2917 20.8058 33.2917 19.8333V1.5M18.625 23.5V30.8333M13.125 30.8333H24.125"
+                                    stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            التحليل
+                        </a>
+                    </li> -->
+            <!-- <li class="nav-item">
+                        <a href="#" class="d-flex align-items-center nav-link gap-lg-3 gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 26">
+                                <path
+                                    d="M21 18.625C21 19.1 20.755 19.5125 20.3817 19.725L11.165 25.275C10.9783 25.425 10.745 25.5 10.5 25.5C10.255 25.5 10.0217 25.425 9.835 25.275L0.618338 19.725C0.431297 19.6197 0.274769 19.4615 0.165756 19.2675C0.0567443 19.0736 -0.000582365 18.8514 4.46045e-06 18.625V7.375C4.46045e-06 6.9 0.245004 6.4875 0.618338 6.275L9.835 0.725C10.0217 0.575 10.255 0.5 10.5 0.5C10.745 0.5 10.9783 0.575 11.165 0.725L20.3817 6.275C20.755 6.4875 21 6.9 21 7.375V18.625ZM10.5 3.1875L8.295 4.525L15.1667 8.7625L17.4533 7.375L10.5 3.1875ZM3.54667 7.375L10.5 11.5625L12.7867 10.1875L5.92667 5.9375L3.54667 7.375ZM2.33334 17.8875L9.33334 22.1125V13.725L2.33334 9.5125V17.8875ZM18.6667 17.8875V9.5125L11.6667 13.725V22.1125L18.6667 17.8875V17.8875Z" />
+                            </svg>
+                            باقاتنا
+                        </a>
+                    </li> -->
+        
+            <li class="nav-item">
+                <a href="./contact.html" class="d-flex align-items-center nav-link gap-lg-3 gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 26">
+                        <path
+                            d="M2.62514 15.4975L15.4463 15.4988C15.5677 15.7138 15.7147 15.9126 15.8897 16.0901L16.7286 16.9429C16.6819 17.1429 16.6189 17.3417 16.5419 17.5405C16.3953 17.4314 16.221 17.3729 16.0425 17.373H2.62514C2.39306 17.373 2.17049 17.4718 2.00639 17.6476C1.84229 17.8235 1.75009 18.062 1.75009 18.3107V19.4447C1.75009 20.2649 2.08378 21.0451 2.66481 21.579C4.13256 22.9306 6.34351 23.6245 9.33033 23.6245C9.66985 23.6245 10.0012 23.6158 10.3221 23.5983C10.4154 24.1559 10.6651 24.686 11.0571 25.1099L11.3231 25.395C10.6907 25.465 10.028 25.5 9.33033 25.5C5.95849 25.5 3.34735 24.6798 1.52375 22.9994C1.04578 22.5592 0.662177 22.0136 0.399188 21.3999C0.136198 20.7862 3.03719e-05 20.1188 0 19.4435V18.3095C0.000309346 17.5636 0.277023 16.8483 0.769298 16.321C1.26157 15.7937 1.92911 15.4975 2.62514 15.4975ZM16.3424 13.3032L16.9304 11.8191C17.2058 11.1239 17.865 10.7451 18.5125 10.8901L18.6502 10.9276L19.3852 11.1802C20.1144 11.4302 20.6733 12.0992 20.8541 12.9394C21.2823 14.9374 20.7678 17.3692 19.3117 20.2362C17.8568 23.0994 16.2619 24.8198 14.5281 25.4C14.197 25.5099 13.8454 25.5282 13.5059 25.4532C13.1664 25.3782 12.8502 25.2124 12.5867 24.9711L12.4432 24.8298L11.8843 24.2297C11.6494 23.9704 11.4976 23.6377 11.451 23.2798C11.4044 22.9219 11.4655 22.5574 11.6253 22.2392L11.7081 22.0942L12.5493 20.7688C12.8807 20.2474 13.4477 20.0011 13.9938 20.1249L14.1419 20.1687L15.696 20.7238C16.3266 20.2084 16.8543 19.5625 17.2478 18.8246C17.588 18.2115 17.8235 17.5383 17.9431 16.8366L17.9875 16.499L16.6936 15.1837C16.4846 14.9656 16.336 14.6898 16.2644 14.3868C16.1927 14.0838 16.2007 13.7654 16.2875 13.467L16.3424 13.3045L16.9304 11.8191L16.3424 13.3032V13.3032ZM9.33033 0.5C10.0964 0.5 10.855 0.661701 11.5628 0.975872C12.2705 1.29004 12.9136 1.75053 13.4553 2.33104C13.997 2.91155 14.4268 3.60072 14.7199 4.35919C15.0131 5.11767 15.164 5.9306 15.164 6.75156C15.164 7.57253 15.0131 8.38546 14.7199 9.14393C14.4268 9.90241 13.997 10.5916 13.4553 11.1721C12.9136 11.7526 12.2705 12.2131 11.5628 12.5273C10.855 12.8414 10.0964 13.0031 9.33033 13.0031C7.78315 13.0031 6.29934 12.3445 5.20532 11.1721C4.1113 9.99969 3.49669 8.40958 3.49669 6.75156C3.49669 5.09355 4.1113 3.50344 5.20532 2.33104C6.29934 1.15864 7.78315 0.5 9.33033 0.5V0.5ZM9.33033 2.37547C8.79407 2.37547 8.26307 2.48866 7.76763 2.70858C7.27219 2.9285 6.82202 3.25084 6.44283 3.6572C6.06363 4.06355 5.76284 4.54597 5.55762 5.0769C5.35241 5.60784 5.24678 6.17689 5.24678 6.75156C5.24678 7.32624 5.35241 7.89529 5.55762 8.42622C5.76284 8.95715 6.06363 9.43957 6.44283 9.84593C6.82202 10.2523 7.27219 10.5746 7.76763 10.7945C8.26307 11.0145 8.79407 11.1277 9.33033 11.1277C10.4134 11.1277 11.452 10.6666 12.2178 9.84593C12.9837 9.02525 13.4139 7.91218 13.4139 6.75156C13.4139 5.59095 12.9837 4.47787 12.2178 3.6572C11.452 2.83652 10.4134 2.37547 9.33033 2.37547V2.37547Z" />
+                    </svg>
+                    تواصل معنا
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a href="./welcome.html" class="d-flex align-items-center nav-link gap-lg-3 gap-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 28">
+                        <path
+                            d="M29 21.7143H24.5385V17.8571H22.3077V21.7143H17.8462V23.6429H22.3077V27.5H24.5385V23.6429H29V21.7143Z" />
+                        <path
+                            d="M22.3077 3.39286H18.9615V2.42857C18.9598 1.91755 18.7242 1.4279 18.3062 1.06655C17.8882 0.705205 17.3219 0.501526 16.7308 0.5H7.80769C7.2166 0.501526 6.65022 0.705205 6.23225 1.06655C5.81428 1.4279 5.57869 1.91755 5.57692 2.42857V3.39286H2.23077C1.63968 3.39438 1.0733 3.59806 0.655327 3.95941C0.237359 4.32076 0.00176535 4.81041 0 5.32143V25.5714C0.00176535 26.0824 0.237359 26.5721 0.655327 26.9334C1.0733 27.2948 1.63968 27.4985 2.23077 27.5H13.3846V25.5714H2.23077V5.32143H5.57692V8.21429H18.9615V5.32143H22.3077V14H24.5385V5.32143C24.5367 4.81041 24.3011 4.32076 23.8831 3.95941C23.4652 3.59806 22.8988 3.39438 22.3077 3.39286ZM16.7308 6.28571H7.80769V2.42857H16.7308V6.28571Z" />
+                    </svg>
+                    تسجيل
+                </a>
+            </li>
+        
+        </ul>
+    </div>
+    <!-- ./ sidenav -->
+
+    <!-- ////////// ./ shared /////////// -->
+
+    <section class="welcome paddTB-85">
+        <div class="container">
+            <div  class="mainHeading mb-5">
+                <h2>باي شيب ترحب بك</h2>
+                <h5 class="mt-3">هدفنا مساعدتك في نقل شحناتك بأسهل طريقة</h5>
+            </div>
+
+            <div class="forms">
+                <div class="row gy-5 row-cols-1 row-cols-md-2 align-items-center">
+                    <div  class="col">
+                        <form class="row g-3 needs-validation" novalidate>
+
+                            <div class="col-12">
+                                <label for="loginEmail" class="form-label">البريد الإلكتروني <span
+                                        class="text-danger">*</span></label>
+                                <input required type="email" class="form-control text-start" id="loginEmail"
+                                    placeholder="ahwork71@gmail.com">
+
+                                <div class="invalid-feedback">
+                                    يرجى إدخال عنوان بريد إلكتروني صحيح.
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="loginPassword" class="form-label">كلمة السر <span
+                                        class="text-danger">*</span></label>
+                                <input
+                                    pattern="^(?=.*[\u0041-\u005A\u0061-\u007A\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF\uFFD2-\uFFD7\uFFDA-\uFFDC])(?=.*\d)[\u0041-\u005A\u0061-\u007A\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF\uFFD2-\uFFD7\uFFDA-\uFFDC\d]{8,}$"
+                                    required type="password" class="form-control text-start" id="loginPassword"
+                                    placeholder="كلمة السر">
+
+                                <div class="invalid-feedback">
+                                    كلمة السر الصحيحة (اكثر من 7 ادخالات - تحتوي علي حروف وارقام)
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                                    <label class="form-check-label" for="autoSizingCheck2">
+                                        تذكرني
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="#" type="button" class="text-primary fontMedium" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    هل نسيت كلمة السر؟
+                                </a>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="fontBold btn btn-primary w-100 mt-2 btnClickTop">تسجيل
+                                    الدخول</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div  class="col">
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-12">
+                                <label for="validationCustom01" class="form-label">الإسم بالكامل <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="الإسم"
+                                    required>
+                                <div class="invalid-feedback">
+                                    أدخل إسمك فضلا.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label">البريد الإلكتروني <span
+                                        class="text-danger">*</span></label>
+                                <input required type="email" class="form-control text-start" id="email"
+                                    placeholder="ahwork71@gmail.com">
+
+                                <div class="invalid-feedback">
+                                    يرجى إدخال عنوان بريد إلكتروني صحيح.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="phone" class="form-label">رقم الهاتف <span class="text-danger">*</span>
+                                    <span class="text-muted">(مرتبط بواتساب)</span></label>
+                                <!-- الرقم الآن يجب ان يكون سعودي -->
+                                <input required type="tel"
+                                    pattern="^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$"
+                                    class="form-control text-start" id="phone" placeholder="+966xxxxxxxxx">
+
+                                <div class="invalid-feedback">
+                                    يرجى إدخال رقم هاتف صحيح.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="password" class="form-label">كلمة السر <span
+                                        class="text-danger">*</span></label>
+                                <input
+                                    pattern="^(?=.*[\u0041-\u005A\u0061-\u007A\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF\uFFD2-\uFFD7\uFFDA-\uFFDC])(?=.*\d)[\u0041-\u005A\u0061-\u007A\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF\uFFD2-\uFFD7\uFFDA-\uFFDC\d]{8,}$"
+                                    required type="password" class="form-control text-start" id="password"
+                                    placeholder="كلمة السر">
+
+                                <div class="invalid-feedback">
+                                    كلمة السر الصحيحة (اكثر من 7 ادخالات - تحتوي علي حروف وارقام)
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                        أوافق علي <a class="text-primary fontMedium" href="#">شروط باي شيب.</a>
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        إقرأ شروطنا ووافق عليها فضلاً.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="fontBold btn btn-primary w-100 mt-2 btnClickTop">سجل
+                                    الآن</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div   class="forms__cover">
+                    <h3 class="forms__cover--heading text-white">ليس لديك حساب؟</h3>
+                    <button id="toggleRegister" type="submit" class="px-5 fontBold btn btn-light mt-2 btnClickTop">سجل
+                        الآن</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">إعادة تعيين كلمة السر</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form class="needs-validation" novalidate>
+                    <div class="modal-body">
+                            <label for="resetEmail" class="form-label">البريد الإلكتروني <span class="text-danger">*</span></label>
+                            <input required type="email" class="form-control text-start" id="resetEmail" placeholder="ahwork71@gmail.com">
+                    
+                            <div class="invalid-feedback">
+                                يرجى إدخال عنوان بريد إلكتروني صحيح.
+                            </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="submit" class="btn btn-primary">إرسال</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ////////// shared /////////// -->
+    <!-- footer -->
+    <footer class="paddTB-85 footer">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-md-6 d-flex gap-5 fontMedium">
+                    <ul class="linkList">
+                        <li class="linkList__item">
+                            <a href="#">الشروط والأحكام</a>
+                        </li>
+                        <li class="linkList__item">
+                            <a href="#">الأسئلة الشائعة</a>
+                        </li>
+                        <li class="linkList__item">
+                            <a href="#">الخصوصية</a>
+                        </li>
+                        <li class="linkList__item">
+                            <a href="#">الرسالة</a>
+                        </li>
+                        <li class="linkList__item">
+                            <a href="#">الرؤية</a>
+                        </li>
+                    </ul>
+                    <ul class="linkList">
+                        <li class="linkList__item">
+                            <a href="#">تواصل معنا</a>
+                        </li>
+                        <li class="linkList__item">
+                            <a href="#">التوظيف</a>
+                        </li>
+                        <li class="linkList__item">
+                            <a href="#">الشركاء</a>
+                        </li>
+                        <li class="linkList__item">
+                            <a href="mailto:ahwork711@gmail.com">ahwork711@gmail.com</a>
+                        </li>
+                        <li class="linkList__item">
+                            <a href="https://api.whatsapp.com/send?phone=201126183678">201126183678</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="centerText mb-5">حمل تطبيق Payship الآن...</h2>
+                    <div class="row row-cols-sm-3">
+                        <a href="#" class="col"><img src="../assets/googlePlay.png" alt="google play"></a>
+                        <a href="#" class="col"><img src="../assets/playStore.png" alt="play store"></a>
+                        <a href="#" class="col"><img src="../assets/appGallery.png" alt="app gallery"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ./ footer -->
+
+    <!-- ////////// ./ shared /////////// -->
+
+
+
+    <!-- tubes -->
+    <div class="tube tube__left tube__1"></div>
+    <div class="tube tube__left tube__2"></div>
+    <div class="tube tube__right tube__1"></div>
+    <div class="tube tube__right tube__2"></div>
+
+
+    
+    
+
+    <script>
+        
+
+        const toggleRegister = document.getElementById('toggleRegister')
+        const forms__cover = document.querySelector('.forms__cover')
+        const forms__cover_heading = document.querySelector('.forms__cover--heading')
+        const forms__cover_heading_text = forms__cover_heading.textContent
+        const toggleRegister_text = toggleRegister.textContent
+
+        toggleRegister.addEventListener('click', () => {
+            forms__cover.classList.toggle('moved')
+            if (forms__cover.classList.contains('moved')) {
+
+                forms__cover_heading.textContent = 'لديك حساب؟'
+                toggleRegister.textContent = 'تسجيل دخول'
+
+            } else {
+                forms__cover_heading.textContent = forms__cover_heading_text
+                toggleRegister.textContent = toggleRegister_text
+
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
